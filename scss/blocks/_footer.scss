@@ -1,0 +1,34 @@
+.footer {
+    background: $color-cards;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 53.5px 15px;
+        @include tablet-small-768{
+            justify-content: center;            
+        }
+    }
+    &__copyright {
+        @include text ($ff, 16px, 19px, 400, $white); 
+        span {
+            color: $color-primary;
+        }
+        @include tablet-small-768{
+            display: none;            
+        }
+    }
+    &__links {
+        display: flex;
+        gap: 34px;
+        a {
+            @include text ($ff, 16px, 19px, 400, $white);
+            transition: $transition; 
+            &:hover {
+                color: $color-primary;
+            }           
+        }
+        
+    }
+}

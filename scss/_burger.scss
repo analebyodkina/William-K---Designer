@@ -1,0 +1,43 @@
+@include tablet-small-768 {
+    .header__ul {
+        position: fixed;
+        width: 70%;
+        height: 92%;
+        overflow-y: auto;
+        background: $bg;
+        box-shadow: 3px 1px 15px $color-primary;
+        left: 15px;
+        top: 20px;
+        
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transform: translateY(-120%);
+        transition: $transition;
+        z-index: 99;
+    }
+    .header__ul.active {
+        transform: translateY(0%);
+        z-index: 99;
+    }
+    .header__ul .material-symbols-outlined {
+        display: inline-block;
+        position: fixed;
+        top: 40px;
+        right: 40px;
+        color: $white;
+    }
+    .header__a {
+        color: $white;
+        font-size: 25px;
+        line-height: 46px;
+        font-weight: 600;
+    }
+    .header__a:hover {
+        text-decoration: underline;
+        color: $white;
+        
+    }
+
+}

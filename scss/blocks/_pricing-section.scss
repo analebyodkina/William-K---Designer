@@ -1,0 +1,66 @@
+.pricing-section {
+    padding-bottom: 90px;
+    @include border-b;
+    &__row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        @include tablet-small-768 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile-576 {
+            grid-template-columns: 1fr;            
+        }
+    }
+}
+.pricing-section .row-card {
+    padding: 32px;
+    flex-direction: column;
+    &__title {
+        @include text($ff, 16px, 19px, 500, $white);
+        text-transform: uppercase;
+        margin-bottom: 14px;
+    }
+    &__price {
+        @include text($ff, 44px, 52px, 500, $white);
+        margin-bottom: 14px;
+    }
+    &__desc {
+        @include text($ff, 14px, 22px, 400, $color-text);
+        padding-bottom: 35px;
+        @include border-b;
+        flex-grow: 1;
+    }
+    &__btn {
+        margin-top: 35px;
+        margin-bottom: 57px;
+        align-self: flex-start;
+        padding: 13px 18px;
+        border: 1px solid $color-primary;
+        border-radius: 5px;
+        transition: $transition;
+        @include text($ff, 16px, 19px, 500, $white);
+        &:hover {
+            @include btn;
+        }        
+    }    
+}
+.list-item {
+    @include text($ff, 16px, 19px, 400,#A29A8B);
+    margin-bottom: 21px;
+    position: relative;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &::before {
+        content:'';
+        background: url(img/icons/check.svg) center no-repeat;
+        color: $white;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+    }
+}
+

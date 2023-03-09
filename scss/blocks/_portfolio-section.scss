@@ -1,0 +1,28 @@
+.portfolio-section {
+    padding-bottom: 90px;
+    @include border-b;
+    &__row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 26px;
+        @include tablet-992 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include mobile-576 {
+            grid-template-columns: 1fr;
+            
+        }
+    }
+}
+.portfolio-section .row-card {
+    padding: 0;
+    transition: $transition;
+    margin: auto;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 1px 0px 20px $white;
+    }
+    img {
+        display: block;
+    }
+    
+}

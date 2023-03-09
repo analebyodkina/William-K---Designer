@@ -1,0 +1,40 @@
+.header {
+    padding-top: 37px;
+    margin-bottom: 95px;
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__logo {
+        @include text($ff, 28px, 33px, 700, $white); 
+        span {
+            color: $color-primary;
+        }
+    }
+    &__ul {
+        display: flex;
+        gap: 24px;
+        .material-symbols-outlined {
+            display: none;
+        }
+    }
+    &__a {
+        @include text($ff, 16px, 19px, 400, $white); 
+        transition: $transition; 
+        &:hover {
+            color: $color-primary;
+        }      
+    }
+    &__a._active {
+        color: $color-primary;
+    }
+    &__burger {
+        display: none;
+        @include tablet-small-768 {
+            display: inline-block;
+            color: $white;
+        }
+    }
+}
+

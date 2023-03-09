@@ -1,0 +1,43 @@
+.customers-section {
+    padding-bottom: 114px;
+    @include border-b;
+    &__row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+        @include mobile-576 {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+.customers-section .row-card {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    &__desc {
+        @include text($ff, 18px, 29px, 400, $white);
+        margin-bottom: 28px;
+        flex-grow: 1;
+                
+    }
+    &__footer {
+        padding-left: 91px;
+        position: relative;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-right: 20px;
+    }
+
+    &__name {
+        @include text($ff, 18px, 29px, 500, $white);
+        margin-bottom: 4px; 
+        flex-grow: 1;       
+    }
+
+    &__profession {
+        @include text($ff, 18px, 29px, 400, $color-primary);        
+    }
+}

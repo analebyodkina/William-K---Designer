@@ -1,0 +1,32 @@
+.services-section {
+    padding-bottom: 90px;
+    @include border-b;
+    &__row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px;
+        @include mobile-576 {
+            grid-template-columns: 1fr;
+        }
+    }    
+}
+.row-card {
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    transition: $transition;
+    &:hover {
+        .row-card__desc {
+            color: $white;
+        }            
+    } 
+    &__title {
+        @include text($ff, 22px, 26px, 500, $white);
+        margin-bottom: 12px;        
+    }
+    &__desc {
+        @include text($ff, 16px, 26px, 400, $color-text); 
+        max-width: 397px;                
+    }              
+}
+

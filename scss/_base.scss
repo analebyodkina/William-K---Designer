@@ -1,0 +1,60 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+.wrapper {
+    max-width: 1440px;
+    margin-inline: auto;
+}
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin-inline: auto;
+}
+body {
+    font-family: $ff;
+    background: $bg;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0; 
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+    height: auto;
+}
+ul {
+    list-style: none;
+}
+.title {
+    @include text($ff, 44px, 52px, 700, $white);
+    margin: 90px 0 17px 0;
+    @include tablet-small-768 {
+        margin-top: 40px;
+        @include mobile-576 {
+            text-align: center;            
+        } 
+    }
+    span {
+        color: $color-primary;
+    }    
+}
+.desc {
+    @include text($ff, 16px, 26px, 400, $color-text); 
+    margin-bottom: 40px;
+    max-width: 460px; 
+    @include mobile-576 {
+        text-align: center;            
+    }  
+}
+.row {
+    display: grid;        
+}
+.row-card {
+    background: $color-cards;
+    border-radius: 8px;
+}
+    
