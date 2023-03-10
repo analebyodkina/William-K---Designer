@@ -414,8 +414,6 @@ ul {
     transition: 0.2s all ease-in-out; }
     .header__a:hover {
       color: #ED9902; }
-  .header__a._active {
-    color: #ED9902; }
   .header__burger {
     display: none; }
     @media (max-width: 768px) {
@@ -473,6 +471,7 @@ ul {
     text-decoration: underline;
     color: #fff; } }
 .main-section__container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,9 +567,28 @@ ul {
     .main-section__btn {
       -ms-flex-item-align: center;
           align-self: center; } }
+.main-section .circle-top {
+  position: absolute;
+  top: -60px;
+  right: -35px;
+  background: transparent; }
+  @media screen and (max-width: 890px) {
+    .main-section .circle-top {
+      display: none; } }
+.main-section .circle-bottom {
+  position: absolute;
+  bottom: 130px;
+  right: 220px; }
+  @media screen and (max-width: 890px) {
+    .main-section .circle-bottom {
+      display: none; } }
 .main-section__img {
+  z-index: 10;
   max-width: 460px;
   max-height: 460px; }
+  .main-section__img img {
+    width: 100%;
+    height: 100%; }
 
 .services-section {
   padding-bottom: 90px;
@@ -777,19 +795,25 @@ ul {
   font-weight: 400;
   color: #A29A8B;
   margin-bottom: 21px;
-  position: relative; }
+  padding-left: 32px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .list-item:last-child {
     margin-bottom: 0; }
   .list-item::before {
-    content: '';
-    background: url(img/icons/check.svg) center no-repeat;
-    color: #fff;
+    content: url("../img/icons/check.svg");
     display: block;
+    width: 12px;
+    height: 10px;
     position: absolute;
-    top: 0;
     left: 0;
-    width: 28px;
-    height: 28px; }
+    top: 0;
+    padding-right: 20px; }
 
 .touch-section {
   padding-bottom: 90px; }
@@ -812,6 +836,8 @@ ul {
       font-weight: 400;
       color: #fff;
       padding: 14px 16px; }
+      .touch-section .form input:focus, .touch-section .form textarea:focus {
+        border: 1px solid #ED9902; }
       .touch-section .form input::-webkit-input-placeholder, .touch-section .form textarea::-webkit-input-placeholder {
         font-family: "Rubik", sans-serif;
         font-size: 14px;

@@ -47,20 +47,21 @@
 .list-item {
     @include text($ff, 16px, 19px, 400,#A29A8B);
     margin-bottom: 21px;
+    padding-left: 32px;
     position: relative;
+    display: flex;
+    align-items: center;
     &:last-child {
         margin-bottom: 0;
     }
     &::before {
-        content:'';
-        background: url(img/icons/check.svg) center no-repeat;
-        color: $white;
+        content: url('../img/icons/check.svg');
         display: block;
+        width: 12px;
+        height: 10px;        
         position: absolute;
+        left: 0;        
         top: 0;
-        left: 0;
-        width: 28px;
-        height: 28px;
+        padding-right: 20px;
     }
 }
-

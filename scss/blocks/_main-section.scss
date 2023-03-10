@@ -1,5 +1,5 @@
 .main-section {
-	&__container {
+	&__container {position: relative;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -49,8 +49,33 @@
             align-self: center;
           }
 	}
+    &__bg-circle {
+        
+    }
+    .circle-top {
+        position: absolute;
+        top: -60px;
+        right: -35px;
+        background: transparent;
+        @media screen and (max-width: 890px) {
+            display: none;            
+        }
+    }
+    .circle-bottom {
+        position: absolute;
+        bottom: 130px;
+        right: 220px;
+        @media screen and (max-width: 890px) {
+            display: none;            
+        }
+    }
 	&__img {
-          max-width: 460px;
-          max-height: 460px;
+        z-index: 10;
+        max-width: 460px;
+        max-height: 460px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
 	}
 }

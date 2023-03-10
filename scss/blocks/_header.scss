@@ -26,9 +26,6 @@
             color: $color-primary;
         }      
     }
-    &__a._active {
-        color: $color-primary;
-    }
     &__burger {
         display: none;
         @include tablet-small-768 {

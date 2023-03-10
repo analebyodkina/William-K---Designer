@@ -8,11 +8,14 @@
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 4px;
         background: transparent;
+        &:focus {
+            border: 1px solid $color-primary;
+        }
         @include text($ff, 16px, 26px, 400, $white);
         padding: 14px 16px;
         &::placeholder {
             @include text($ff, 14px, 17px, 400, $color-text);                
-        }
+        }        
     }
 }
     &__btn {
