@@ -8,7 +8,8 @@
           @include tablet-small-768 {
             flex-wrap: wrap-reverse;
             justify-content: center;
-            text-align: center;
+            text-align: center; 
+            gap: 15px;           
         }
 	}
 	&__info {
@@ -49,33 +50,47 @@
             align-self: center;
           }
 	}
-    &__bg-circle {
-        
-    }
-    .circle-top {
-        position: absolute;
-        top: -60px;
-        right: -35px;
-        background: transparent;
-        @media screen and (max-width: 890px) {
-            display: none;            
-        }
-    }
-    .circle-bottom {
-        position: absolute;
-        bottom: 130px;
-        right: 220px;
-        @media screen and (max-width: 890px) {
-            display: none;            
-        }
-    }
-	&__img {
-        z-index: 10;
+	&__img {        
         max-width: 460px;
         max-height: 460px;
+        position: relative;
         img {
-            width: 100%;
-            height: 100%;
+            transform: scale(1.13);
+            position: relative;
+            top: 10px;
+            z-index: 10;
+            @include tablet-small-768 {
+                transform: scale(1);          
+            }
         }
-	}
+        &::before {
+            content: '';
+            display: block;
+            width: 209px;
+            height: 209px;
+            background: linear-gradient(180deg, #4D4A45 0%, #292824 100%);
+            border-radius: 50%;        
+            position: absolute;
+            left: 25px;        
+            bottom: -69px; 
+            @include desktop-small-1200 {
+                display: none;           
+            }           
+	    }
+        &::after {
+            content: '';
+            display: block;
+            width: 342px;
+            height: 342px;
+            background: linear-gradient(180deg, #4D4A45 0%, #292824 100%);
+            border-radius: 50%;        
+            position: absolute;
+            z-index: 1;
+            right: -33px;        
+            top: -60px;
+            @include desktop-small-1200 {
+                display: none;           
+            }              
+	    }
+    }
 }
